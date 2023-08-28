@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+   
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="images/favicon.png">
+      <title>J.S. HyE-META | Home</title>
+      <!-- CSS FILES START -->
+      <link href="css/custom.css" rel="stylesheet">
+      <link href="css/color.css" rel="stylesheet">
+      <link href="css/responsive.css" rel="stylesheet">
+      <link href="css/owl.carousel.min.css" rel="stylesheet">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/prettyPhoto.css" rel="stylesheet">
+      <link href="css/all.min.css" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- CSS FILES End -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+ 
+      <style>
+      .low {
+        text-transform: lowercase;
+        font-size: 60px;
+
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        
+      }
+
+      .categories-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        
+      }
+
+      .category-btn {
+        background: radial-gradient(circle at 10% 20%, rgba(0, 149, 218, 0.85) 9.9%, rgb(56, 80, 114) 100.3%);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 10px 10px;
+        color: #ffffff;
+        width: 180px;
+        height: 60px;
+        border-radius: 8px;
+      }
+
+      .products-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        
+      /* background: linear-gradient(107deg, rgb(255, 67, 5) 11.1%, rgb(245, 135, 0) 95.3%);*/
+      }
+      .product h5 {
+         margin: 10px 0;
+         padding: 10px;
+         background-color: rgba(243, 236, 236, 0.7);
+         color: rgb(0, 0, 0);
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+      }
+/* Set a fixed height for the product images */
+         .pro-box img {
+         max-height: 200px; /* Set the maximum height for the images */
+         width: 100%; /* Maintain the aspect ratio */
+         object-fit: cover; /* Crop the images to fit the container without distortion */
+         }
+
+         /* Arrange the project boxes in a grid */
+         .projects-grid-two {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 20px;
+         }
+
+         /* Style for the project boxes */
+         .pro-box {
+         border: 1px solid #ccc;
+         border-radius: 0.6em;
+         overflow: hidden; /* Hide overflowing content */
+         position: relative;
+         }
+
+         .pro-box h5 {
+         margin: 10px 0;
+         padding: 10px;
+         background-color: rgba(243, 236, 236, 0.7);
+         color: rgb(0, 0, 0);
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         }
+
+         .pro-box .pro-hover {
+         display: none;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background-color: rgba(255, 249, 249, 0.9);
+         padding: 20px;
+         color: rgb(0, 0, 0);
+         }
+
+         .pro-box:hover .pro-hover {
+         display: block;
+         }
+      .product p {
+         max-height: 80px; /* Set a maximum height for the description */
+         overflow: hidden; /* Hide overflowing content */
+      }
+
+      .products-slider {
+         width: 600px; /* Fixed width for the products container */
+         height: 400px; /* Fixed height for the products container */
+         max-width: 100%; /* Ensure responsiveness for smaller screens */
+         overflow: auto; /* Add scrollbars if content overflows */
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 20px;
+      }
+
+      .product {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 25px; 
+        box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+         padding: 3.5em 1em;
+         border-radius: 0.6em;
+         color: #1f003b;
+         cursor: pointer;
+         transition: 0.3s;
+         background-color: #ffffff;
+         text-align: center;
+         overflow: hidden; /* Hide overflowing content */
+         position: relative;
+      }
+
+      .product img {
+         width: 100%; /* Make sure the image takes the full width of its container */
+         height: auto; /* Automatically adjust the height while maintaining aspect ratio */
+         max-height: 200px; /* Set the maximum height for the image */
+         object-fit: cover; /* Crop the image to fit the container without distortion */
+      }
+
+      .slick-prev, .slick-next {
+        background-color: #f0f0f0;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .slick-prev {
+        left: -40px;
+      }
+
+      .slick-next {
+        right: -40px;
+      }
+
+      .read-more {
+        color: blue;
+        text-decoration: none;
+      }
+
+      .read-more:hover {
+        text-decoration: underline;
+      }
+      .toggle-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000; /* Ensure it's above other elements */
+      }
+
+      .toggle-checkbox {
+        display: none; /* Hide the checkbox input */
+      }
+
+      .toggle-label {
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 15px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .toggle-label::before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background-color: white;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s;
+      }
+
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #007bff; /* Blue color for active toggle */
+      }
+
+      .toggle-checkbox:checked + .toggle-label::before {
+        transform: translateX(30px);
+      }
+
+
+      body .dark-mode {
+        color: black; /* Change text color to black in dark mode */
+      }
+      #black-overlay {
+            
+            background-color: rgba(0, 0, 0, 0.9); /* Adjust the alpha value (0.5 for 50% opacity) */
+        }
+      </style>
+   </head>
+   <body>
+      <div class="wrapper home2">
+         <!--Header Start-->
+         <header class="header-style-2">
+            <nav class="navbar navbar-expand-lg">
+               <a class="navbar-brand" href="index.html"><img src="images/jshyemeta1.png" style="width:270px"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html"  role="button"  aria-haspopup="true" aria-expanded="false"> Home </a>
+                     </li>
+<!--                     <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="about.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About </a>-->
+<!--                     </li>-->
+                     <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="targeted_products.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Target Sectors </a>
+                        <ul class="dropdown-menu" >
+                           <li><a href="electronic-products.html">Electronics</a> </li>
+                           <li><a href="transportation-products.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Transportation</a>
+						   <ul class="dropdown-menu" >
+							   <li><a href="transportation-aerospace-products.html">Aerospace & Defence</a></li>
+							   <li><a href="transportation-automotive-products.html">Automotive</a></li>
+                        </ul>
+						   </li>
+                           <li><a href="architecture-products.html">Architecture</a> </li>
+                           <li><a href="agriculture-products.html">Agriculture</a> </li>
+<!--                           <li><a href="packaging-products.html">Packaging</a> </li>-->
+                           <li><a href="packaging&other-products.html">Packaging & Other Application</a> </li>
+                        </ul>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="events.html"  role="button" aria-haspopup="true" aria-expanded="false"> Events </a>
+       
+                     </li>
+					 <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="blog.html"  role="button" aria-haspopup="true" aria-expanded="false"> Blogs </a>
+                        
+                     </li>
+                    
+                     
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="contact.html"  role="button"  aria-haspopup="true" aria-expanded="false"> Contact </a>
+                     
+                     </li>
+                     
+                  </ul>
+                  
+               </div>
+            </nav>
+         </header>
+
+         <!--Header End--> 
+         <!--Slider Start-->
+         <section id="home-slider" class="owl-carousel owl-theme wf100">
+            <div class="item">
+               <div class="slider-caption h2slider">
+                  <div class="container">
+                     <strong><span>Let's make </span>World Sustainable</strong>
+
+					 <h1 id="grad1">J.S. H<span class="low">y</span>E-Meta</h1>
+                      <h1 id="grad1">Technology</h1>
+<!--                     <a href="contact.html">Contact us</a> <a href="page-404.html">Learn More</a>-->
+                  </div>
+               </div>
+                <img src="images/966771.jpg"  alt="">
+            </div>
+            <div class="item">
+               <div class="slider-caption h2slider">
+                  <div class="container">
+                     <strong> <span>  </span></strong>
+                     <h1 style="padding: 48px 0px 0px 0px">H<span class="low">y</span>E-META</h1>
+                     <p style="font-size: 28px"><strong>H</strong>ybrid <strong>E</strong>co-Friendly <strong>M</strong>aterials for <strong>E</strong>lectronics, <strong>T</strong>ransportation, <strong>A</strong>rchitecture & <strong>A</strong>griculture</p>
+<!--                     <a href="contact.html">Contact us</a><a href="page-404.html">Learn More</a>-->
+                  </div>
+               </div>
+			   <img src="images/lander1.jpg"  alt="">
+
+            </div>
+            <div class="item">
+               <div class="slider-caption h2slider">
+                  <div class="container">
+                     <strong><span>Where Innovation meets responsibility</span></strong>
+                     <h1>J.S. H<span class="low">y</span>E-Meta</h1>
+                      <p><strong>Circular Economy</strong>, Boundless Future</p>
+<!--                     <a href="contact.html">Contact us</a> <a href="page-404.html">Learn More</a>-->
+                  </div>
+               </div>
+               <img src="images/homepage3.jpg" >
+            </div>
+         </section>
+         <!--Slider End--> 
+         
+         <!--Service Area Start-->
+         <section class="services-area wf100">
+            <div class="container">
+               <ul>
+                  <!--box  start-->
+                  <li>
+                     <div class="sinfo">
+                        <img src="images/sericon2.png" alt="">
+                        <h6>Sustainability</h6>
+<!--                        <p>Waste Management</p>-->
+                     </div>
+                  </li>
+                  <!--box  end-->
+                  <!--box  start-->
+                  <li>
+                     <div class="sinfo">
+                        <img src="images/sericon5.png" alt="">
+                        <h6>Circular Economy</h6>
+<!--                        <p>Polar, Prevailing, Tropical</p>-->
+                     </div>
+                  </li>
+                  <!--box  end-->
+                  <!--box  start-->
+                  <li>
+                     <div class="sinfo">
+                        <img src="images/sericon3.png" alt="">
+                        <h6>Bio-degradable</h6>
+<!--                        <p>Save Earth</p>-->
+                     </div>
+                  </li>
+                  <!--box  end-->
+                  <!--box  start-->
+                  <li>
+                     <div class="sinfo">
+                        <img src="images/sericon4.png" alt="">
+                        <h6>Hybrid Composites</h6>
+<!--                        <p>Save Natural Energy</p>-->
+                     </div>
+                  </li>
+                  <!--box  end-->
+                  <!--box  start-->
+                  <li>
+                     <div class="sinfo">
+                        <img src="images/sericon6.png" alt="">
+                        <h6>Zero Carbon Emissions</h6>
+<!--                        <p>Circular Economy</p>-->
+                     </div>
+                  </li>
+                  <!--box  end-->
+               </ul>
+            </div>
+         </section>
+         <!--Service Area End--> 
+         <!--About Section Start-->
+         <section class="home2-about wf100 p100 gallery">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-5">
+                      <div class="video-img"><i class="fas fa-play"></i><img src="images/giphy.gif" alt=""> </div>
+                  </div>
+                  <div class="col-md-7">
+                     <div class="h2-about-txt">
+<!--                        <h3>Paving the way towards a plastic-free world</h3>-->
+                        <h2>Paving the way towards a plastic-free world</h2>
+                        <p>At HyE-META, our aspiration is to emerge as a worldwide forerunner in the development of environmentally conscious hybrid composite materials and sustainable product services catering to sectors such as Electronics, Aerospace and Defense, Automotive, Agriculture, Packaging, as well as the Structural and Civil industries.</p>
+                        <a class="aboutus" href="about.html">More About us</a> 
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="home-facts counter pt80">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-3 col-sm-6 col-md-3">
+                        <div class="counter-box">
+                           <p class="counter-count">2023</p>
+                           <p class="ctxt">Founded</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-sm-6 col-md-3">
+                        <div class="counter-box">
+                           <p class="counter-count">2</p>
+                           <p class="ctxt">Countries</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-sm-6 col-md-3">
+                        <div class="counter-box">
+                           <p class="counter-count">10</p>
+                           <p class="ctxt">Team Members</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-sm-6 col-md-3">
+                        <div class="counter-box">
+                           <p class="counter-count">5</p>
+                           <p class="ctxt">Products</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--About Section End--> 
+         <!--Current Projects Start-->
+         <section class="wf100 p80 current-projects">
+         <div class="container">
+           <div class="row">
+            <div class="col-lg-6" style="flex: 0 0 100%; max-width: 100%; Margin: 0 0 32px 0;">
+                <div class="section-title-2">
+<!--                    <h5>Visit Our P</h5>-->
+                    <h2>Our Target Sectors</h2>
+                    <h4>HyE-META aims to emerge as a global leader in mass manufacturing & production of bio-degradable hybrid composite materials made from agricultural waste for wide sector applications</h4>
+                </div>
+            </div>
+              <div class="projects-grid-two">
+               <div class="container">
+                  <div class="row">
+                      <!--Project box Start-->
+                     <div class="col-md-4 col-sm-6">
+                        <div class="pro-box">
+                            <img src="images/TargetSectors/Packaging.jpg" alt="">
+                                    <h5>PACKAGING & OTHER</h5>
+                                    <div class="pro-hover">
+<!--                                       <h6>Solar & Wind Energy</h6>-->
+                                       <p>Revolutionize your machinery with our precision-engineered eco-friendly gears, seamlessly merging mechanical excellence with environmental responsibility. Unlock smooth operations and a reduced carbon footprint in one powerful package.</p>
+                                       <a href="packaging&other-products.html">Read More</a>
+                                    </div>
+                        </div>
+                     </div>
+                        <!--Project box End-->
+              <!--Project box Start-->
+                     <div class="col-md-4 col-sm-6">
+                        <div class="pro-box">
+                           <img src="images/TargetSectors/Electronics.jpg" alt="" >
+                                    <h5>ELECTRONICS</h5>
+                                    <div class="pro-hover">
+
+                                       <p>Experience innovation and sustainability with our cutting-edge eco-friendly circuit boards, designed to enhance electronic performance while minimizing environmental impact. Harness advanced technology while supporting a greener tomorrow.</p>
+                                       <a href="electronic-products.html">Read More</a>
+                                    </div>
+                        </div>
+                     </div>
+                     <!--Project box End-->
+                     <!--Project box Start-->
+                     <div class="col-md-4 col-sm-6">
+                        <div class="pro-box">
+                           <img src="images/TargetSectors/Aerospace.jpg" alt="">
+                                    <h5>AEROSPACE</h5>
+                                    <div class="pro-hover">
+                                       <!--<h6>Recycling & Waste Management</h6>-->
+                                       <p>Elevate your projects with our eco-conscious insulators, combining top-tier electrical insulation with a commitment to a cleaner planet. Discover durable solutions that prioritize both performance and sustainability.</p>
+                                       <a href="transportation-aerospace-products.html">Read More</a>
+                                    </div>
+                        </div>
+                     </div>
+                     <!--Project box End-->
+                     <!--Project box Start-->
+                     <div class="col-md-4 col-sm-6">
+                        <div class="pro-box">
+                            <img src="images/TargetSectors/Automotive.jpg" alt="">
+                                    <h5>AUTOMOTIVE</h5>
+                                    <div class="pro-hover">
+<!--                                       <h6>Solar & Wind Energy </h6>-->
+                                       <p>Revolutionize your machinery with our precision-engineered eco-friendly gears, seamlessly merging mechanical excellence with environmental responsibility. Unlock smooth operations and a reduced carbon footprint in one powerful package.</p>
+                                       <a href="transportation-automotive-products.html">Read More</a>
+                                    </div>
+                        </div>
+                     </div>
+                        <!--Project box End-->
+                     <!--Project box Start-->
+                     <div class="col-md-4 col-sm-6">
+                        <div class="pro-box">
+                           <img src="images/TargetSectors/Architecture.jpg" alt="" >
+                                    <h5>ARCHITECTURE</h5>
+                                    <div class="pro-hover">
+
+                                       <p>Experience innovation and sustainability with our cutting-edge eco-friendly circuit boards, designed to enhance electronic performance while minimizing environmental impact. Harness advanced technology while supporting a greener tomorrow.</p>
+                                       <a href="architecture-products.html">Read More</a>
+                                    </div>
+                        </div>
+                     </div>
+                     <!--Project box End-->
+                     <!--Project box Start-->
+                     <div class="col-md-4 col-sm-6">
+                        <div class="pro-box">
+                           <img src="images/TargetSectors/Agriculture.jpg" alt="">
+                                    <h5>AGRICULTURE</h5>
+                                    <div class="pro-hover">
+                                       <!--<h6>Recycling & Waste Management</h6>-->
+                                       <p>Elevate your projects with our eco-conscious insulators, combining top-tier electrical insulation with a commitment to a cleaner planet. Discover durable solutions that prioritize both performance and sustainability.</p>
+                                       <a href="agriculture-products.html">Read More</a>
+                                    </div>
+                        </div>
+                     </div>
+                     <!--Project box End-->
+
+                     </div>
+                  </div>
+              </div>
+                     </div>
+            </div>
+<!--             <div class="Product-Catelog">-->
+<!--               <div class="categories-container">-->
+<!--              <button class="category-btn" onmouseover="showProducts(1)">Agriculture</button>-->
+<!--              <button class="category-btn" onmouseover="showProducts(2)">Architecture</button>-->
+<!--              <button class="category-btn" onmouseover="showProducts(3)">Transportation</button>-->
+<!--              <button class="category-btn" onmouseover="showProducts(4)">Packaging & Others</button>-->
+<!--            </div>-->
+
+<!--                <div class="products-container" id="products-container">-->
+<!--              &lt;!&ndash; Products will be displayed here &ndash;&gt;-->
+<!--                </div>-->
+<!--             </div>-->
+         </section>
+         <!--Current Projects End--> 
+         <!--News & Articles Start-->
+<!--         <div class="alert alert-success alert-dismissible fade show fixed-bottom m-3" role="alert" id="copyAlert" style="display: none;">-->
+<!--        <strong>URL copied to clipboard!</strong>-->
+<!--        <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--            <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--    </div>-->
+<!--         <section class="h2-news wf100 p80">-->
+<!--            <div class="container">-->
+<!--               <div class="row">-->
+<!--                  <div class="col-md-6">-->
+<!--                     <div class="section-title-2">-->
+<!--                        <h5>Read Our Latest</h5>-->
+<!--                        <h2>News & Articles</h2>-->
+<!--                     </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-md-6"> <a href="#" class="view-more">View More News</a> </div>-->
+<!--               </div>-->
+<!--               <div class="row">-->
+<!--                  <div class="col-md-6">-->
+<!--                     <div class="blog-post-large">-->
+<!--                        <div class="post-thumb"> <a href="blog-details.html"  id="myAnchor"><i class="fas fa-link"></i></a> <img src="https://lindungihutan.com/blog/wp-content/uploads/2023/02/Apa-yang-Dimaksud-Dengan-Sustainable-Product.jpg" alt=""></div>-->
+<!--                        <div class="post-txt">-->
+<!--                           <ul class="post-meta">-->
+<!--                              <li><i class="fas fa-calendar-alt"></i> 29 July, 2023</li>-->
+<!--                              <li><i class="fas fa-comments"></i> 134 Comments</li>-->
+<!--                           </ul>-->
+<!--                           <h5><a href="blog-details.html">Hybrid Composites: The Sustainable Future of Manufacturing</a></h5>-->
+<!--                        </div>-->
+<!--                     </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-md-6">-->
+<!--                     &lt;!&ndash;Blog Small Post Start&ndash;&gt;-->
+<!--                     <div class="blog-small-post">-->
+<!--                        <div class="post-thumb"> <a href="" id="myAnchor"><i class="fas fa-link"></i></a> <img src="https://www.iberdrola.com/documents/20125/39985/envases_746x419.jpg/b58e08dc-33e2-2e68-f129-bce348cd8433?t=1626760795373" alt=""> </div>-->
+<!--                        <div class="post-txt">-->
+<!--                           <span class="pdate"> <i class="fas fa-calendar-alt"></i> 15 Aug, 2023</span>-->
+<!--                           <h5><a href="blog-details.html">Advantages of eco-friendly cups and bags.</a></h5>-->
+<!--                           <p>According to a survey the perceived higher cost of environmentally.</p>-->
+<!--                           <a href="blog-details.html" class="rm">Read More</a> -->
+<!--                        </div>-->
+<!--                     </div>-->
+<!--                     &lt;!&ndash;Blog Small Post End&ndash;&gt; -->
+<!--                     &lt;!&ndash;Blog Small Post Start&ndash;&gt;-->
+<!--                     <div class="blog-small-post">-->
+<!--                        <div class="post-thumb"> <a href="#" id="myAnchor"><i class="fas fa-link"></i></a> <img src="images/h2news3.jpg" alt=""> </div>-->
+<!--                        <div class="post-txt">-->
+<!--                           <span class="pdate"> <i class="fas fa-calendar-alt"></i> 09 Aug, 2023</span>-->
+<!--                           <h5><a href="#">The effort GoGreen has been felt across</a></h5>-->
+<!--                           <p>Majority have suffered alteration in some form by injected humour.</p>-->
+<!--                           <a href="blog-details.html" class="rm">Read More</a> -->
+<!--                        </div>-->
+<!--                     </div>-->
+                     <!--Blog Small Post End--> 
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--News & Articles End--> 
+         <!--Why Ecova + Facts Start-->
+         <section class="why-js wf100" >
+            <div class="container" >
+               <div class="row">
+                  <div class="col-md-12">
+                     <h1> Why J.S H<span class="low" style="font-size: 32px">y</span>E-META?</h1>
+                     <p> J.S HyE-META is a commited to embrace sustainable solutions, drive innovation, and be a force for positive change. By partnering with us, you not only elevate your business but also contribute to a more sustainable and responsible future. Together, let's pioneer a new era of sustainability through hybrid composites and shape a world where business success and environmental consciousness go hand in hand.
+                     </p>
+                     <a href="contact.html" class="cus">Signup to Join us</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!--InstaGram Start-->
+<!--         <div class="instagram">-->
+<!--            <ul>-->
+<!--               <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="https://www.plm.automation.siemens.com/media/global/en/discrete-manufacturing-ss732811756-og-1200x630_tcm27-109217.jpg" style="width:380px" alt=""> </li>-->
+<!--               <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="https://www.redlinegroup.com/File.ashx?m=3&path=Root/Images/AdobeStock_219080081-compressor.jpeg" style="width:460px" alt=""> </li>-->
+<!--               <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="https://cdn.thomasnet.com/insights-images/b1af8aff8c7b00c0cb5f8115c3cc5b08-large.jpg" style="width:480px" alt=""> </li>-->
+<!--               <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="https://media.istockphoto.com/id/1202136432/photo/agricultural-silos-storage-and-drying-of-grains.jpg?s=612x612&w=0&k=20&c=WAxa26sbMSZTXhGB5bZR4Lh-x2d8UI4SoE23R-JKFBI=" style="width:300px" alt=""> </li>-->
+<!--               <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="https://www.plm.automation.siemens.com/media/global/en/SM%20new%20image_tcm27-110310.png" style="width:360px" alt=""> </li>-->
+<!--               <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="https://static.dw.com/image/16462457_6.jpg" style="width:360px" alt=""> </li>-->
+<!--               <li> <a href="#"> <i class="fas fa-search"></i> </a> <img src="https://www.bnhgastanksindia.com/images/bnh-industry.jpg" style="width:270px" alt=""> </li>-->
+<!--               -->
+<!--            </ul>-->
+<!--         </div>-->
+         <!--InstaGram End-->
+         <!--Partner Logos Section Start-->
+<!--            <div class="partner-logos wf100">-->
+<!--               <div class="container">-->
+<!--                  <div id="partner-logos" class="owl-carousel owl-theme">-->
+<!--                     <div class="item"><img src="images/plogo1.png" alt=""></div>-->
+<!--                     <div class="item"><img src="images/plogo2.png" alt=""></div>-->
+<!--                     <div class="item"><img src="images/plogo3.png" alt=""></div>-->
+<!--                     <div class="item"><img src="images/plogo4.png" alt=""></div>-->
+<!--                     <div class="item"><img src="images/plogo5.png" alt=""></div>-->
+<!--                     <div class="item"><img src="images/plogo1.png" alt=""></div>-->
+<!--                     <div class="item"><img src="images/plogo2.png" alt=""></div>-->
+<!--                     <div class="item"><img src="images/plogo3.png" alt=""></div>-->
+<!--                     <div class="item"><img src="images/plogo4.png" alt=""></div>-->
+<!--                     <div class="item"><img src="images/plogo5.png" alt=""></div>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--            </div>-->
+            <!--Partner Logos Section End-->
+         <!--Footer Start-->
+         <footer class="footer">
+            <div class="footer-top wf100">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!--Footer Widget Start-->
+                        <div class="footer-widget">
+                           <h4>About J.S HyE-META</h4>
+                           <p>J.S HyE-META is committed to embrace sustainable solutions, fostering innovation, and catalyzing positive transformation. By partnering with us, you not only elevate your business but also contributing in creating a sustainable and accountable future.</p>
+                           <a href="about.html" class="lm">About us</a> 
+                        </div>
+                        <!--Footer Widget End--> 
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!--Footer Widget Start-->
+                        <div class="footer-widget">
+                           <h4>Target Sectors</h4>
+                           <ul class="quick-links">
+                              <li><a href="electronic-products.html">Electronics</a></li>
+                              <li><a href="transportation-products.html">Transportation</a></li>
+                              <li><a href="architecture-products.html">Architecture</a></li>
+                              <li><a href="agriculture-products.html">Agriculture</a></li>
+                              <li><a href="packaging-products.html">Packaging</a></li>
+                             
+                           </ul>
+                        </div>
+                        <!--Footer Widget End--> 
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!--Footer Widget Start-->
+<!--                        <div class="footer-widget">-->
+<!--                           <h4>Latest Posts</h4>-->
+<!--                           <ul class="lastest-products">-->
+<!--                              <li> <img src="https://www.metalworkingworldmagazine.com/files/2014/05/automotive-industry.jpg" style="width:70px" alt=""> <strong><a href="#">Automative ...</a></strong> <span class="pdate"><i>Posted:</i> 29 July, 2023</span> </li>-->
+<!--                              <li> <img src="https://gumlet.assettype.com/swarajya/2020-08/7f5acda4-8891-49fc-9f28-f339d0b98c23/Ag_tech.jpeg?w=70&auto=format%2Ccompress&ogImage=true" alt=""> <strong><a href="#">Agriculture..</a></strong> <span class="pdate"><i>Posted:</i> 29 July, 2023</span> </li>-->
+<!--                              <li> <img src="https://images.pexels.com/photos/157811/pexels-photo-157811.jpeg?cs=srgb&dl=pexels-yentl-jacobs-157811.jpg&fm=jpg" style="width:70px" alt=""> <strong><a href="#">Architecture...</a></strong> <span class="pdate"><i>Posted:</i> 29 July, 2023</span> </li>-->
+<!--                           </ul>-->
+<!--                        </div>-->
+                        <!--Footer Widget End--> 
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+            <div class="footer-copyr wf100">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-4 col-sm-4"> <img src="images/jshyemeta.png" alt=""> </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!--Footer End--> 
+      </div>
+      <!--   JS Files Start  --> 
+      <script src="js/jquery-3.3.1.min.js"></script> 
+      <script src="js/jquery-migrate-1.4.1.min.js"></script> 
+      <script src="js/popper.min.js"></script> 
+      <script src="js/bootstrap.min.js"></script> 
+      <script src="js/owl.carousel.min.js"></script> 
+      <script src="js/jquery.prettyPhoto.js"></script> 
+      <script src="js/isotope.min.js"></script> 
+      <script src="js/custom.js"></script>
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ <script>
+ document.getElementById('btnSwitch').addEventListener('click',()=>{
+    if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+        document.documentElement.setAttribute('data-bs-theme','light')
+    }
+    else {
+        document.documentElement.setAttribute('data-bs-theme','dark')
+    }
+})
+
+ </script>
+       <script>
+       
+
+$(document).ready(function() {
+  $('.products-container').slick({
+    slidesToShow: 3,
+    prevArrow: '<button class="slick-prev">Previous</button>',
+    nextArrow: '<button class="slick-next">Next</button>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+});
+
+function showProducts(categoryId) {
+  const products = getProductsForCategory(categoryId);
+
+  const productsContainer = $('#products-container');
+  productsContainer.slick('unslick'); // Uninitialize if already initialized
+  productsContainer.empty(); // Clear previous products
+
+  products.forEach(product => {
+    const productDiv = $('<div>').addClass('product');
+    productDiv.html(`
+      
+      <img src="${product.image}" alt="${product.name}"> 
+      <h5>${product.name}</h5>
+      <p>${product.description}</p>
+      <a href="#" class="read-more">Read More</a>
+    `);
+    productsContainer.append(productDiv);
+  });
+
+  productsContainer.slick({
+    slidesToShow: 3,
+    prevArrow: '<button class="slick-prev">Previous</button>',
+    nextArrow: '<button class="slick-next">Next</button>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+}
+
+function getProductsForCategory(categoryId) {
+  // Replace this with your actual data retrieval logic
+  const productsByCategory = {
+    1: [
+      { name: 'Seed Pouches', image: 'images/New Folder 2/agriculture/seed pouches.jpg', description: " Embrace sustainable agriculture from the very start with our eco-friendly seed pouches, offering a responsible way to plant the seeds of tomorrow's harvest. Nurture growth while nurturing the environment" },
+      { name: 'Fertilizer Tanks', image: 'images/New Folder 2/agriculture/fertilizer tanks.jpg', description: "Cultivate your crops and your commitment to sustainability with our durable fertilizer tanks, designed to provide efficient nutrient delivery while minimizing environmental impact. Fuel healthy harvests while reducing your ecological footprint." },
+      { name: 'Farming Gears', image: 'images/New Folder 2/agriculture/farming gears.jpg', description: "Elevate your farming practices with our precision-engineered eco-conscious farming gears, designed to enhance efficiency and reduce resource consumption. Drive productivity while treading lightly on the land." },
+      { name: 'Farming Equipment', image: 'images/New Folder 2/agriculture/farming equipments.jpg', description: "Harness the power of advanced farming equipment that harmonizes with nature. Our eco-friendly solutions enable you to cultivate bountiful yields while promoting responsible land stewardship." },
+      { name: 'Harvestor Parts', image: 'product1B.jpg', description: "Reap the rewards of sustainable agriculture with our eco-conscious harvester parts, crafted to optimize crop collection while honoring environmental preservation. Harvest abundance while showing care for the Earth." },
+      { name: 'Mulch Films', image: 'images/New Folder 2/agriculture/mulch films.jpg', description: " Foster growth in your fields and a greener planet with our eco-friendly mulch films, designed to conserve water, enhance soil health, and promote sustainable cultivation practices. Cultivate prosperity while embracing responsible agriculture." }
+    ],
+    2: [
+      { name: 'Window Panels', image: 'images/New Folder 2/architecture/wes-hicks-hD4UvN6ro2o-unsplash.jpg', description: "Illuminate your spaces with our innovative window panels, seamlessly combining aesthetics and energy efficiency for a sustainable architectural design. Let natural light in while keeping environmental impact minimal." },
+      { name: 'Wall Panels', image: 'images/New Folder 2/architecture/WALL PANELS.jpg', description: "Elevate interior and exterior design with our versatile and eco-friendly wall panels, adding both style and sustainable elements to your architectural projects. Build aesthetically pleasing spaces that respect the planet." },
+      { name: 'Shower Stalls', image: 'images/New Folder 2/architecture/ginger-hendee-N8buV78yNBo-unsplash.jpg', description: "Experience luxury without guilt with our environmentally conscious shower stalls, offering a blend of opulence and water efficiency. Embrace responsible design while indulging in relaxation." },
+      { name: 'Bathtubs', image: 'images/New Folder 2/architecture/bathtubs.jpg', description: "Immerse yourself in comfort and sustainability with our eco-friendly bathtubs, designed for a luxurious bathing experience that's gentle on the environment. Soak away stress while supporting green practices." },
+      { name: 'Storage Tanks', image: 'images/New Folder 2/architecture/storage tanks.jpg', description: "Store resources responsibly with our durable and eco-conscious storage tanks, designed to protect valuable materials while minimizing ecological impact. Safeguard what matters most with a nod to sustainability." },
+      { name: 'Road Surfacing', image: 'images/New Folder 2/architecture/road surfacing.jpg', description: "Pave the way to a greener future with our sustainable road surfacing solutions, combining durability and environmental stewardship. Drive progress on roads that prioritize both efficiency and Earth's well-being." },
+      { name: 'Countertops', image: 'images/New Folder 2/architecture/countertops.jpg', description: "Craft stunning and environmentally friendly spaces with our exquisite countertops, marrying style and sustainability in every design. Create a lasting impact on your projects and the planet." },
+      { name: 'Imitation Granite', image: 'images/New Folder 2/architecture/imitation granite.jpg', description: "Achieve the elegance of granite without the environmental strain with our imitation granite solutions. Redefine opulence by choosing a responsible and sustainable approach to architectural design." },
+      { name: 'Sinks', image: 'images/New Folder 2/architecture/sinks.jpg', description: "Embrace functionality and eco-friendliness with our thoughtfully designed sinks, bringing efficiency and sustainability to every space. Wash away waste guilt while supporting a cleaner world." },
+      { name: 'Swimming Pool Panels', image: 'images/New Folder 2/architecture/swimming pool panels.jpg', description: " Dive into sustainability with our eco-friendly swimming pool panels, offering a harmonious blend of aquatic enjoyment and responsible design. Create pools that reflect both luxury and environmental consciousness." },
+      { name: 'Furniture', image: 'images/New Folder 2/architecture/furniture.jpg', description: "Furnish your spaces with our eco-conscious furniture, delivering comfort and style while considering the planet's health. Design interiors that speak to your taste and your commitment to sustainability." },
+      { name: 'Insulation', image: 'images/New Folder 2/architecture/thanh-nguyen-vQtHGJ2ekVE-unsplash.jpg', description: "Build with care and efficiency using our top-tier insulation solutions, enhancing energy conservation and comfort in architectural projects while minimizing environmental impact. Create spaces that stay warm in winter, cool in summer, and gentle on the Earth year-round." }
+    ],
+    3: [
+      { name: 'Propellant Tanks:', image: 'images/New Folder 2/aerospace/spacex-YSvUYqf9Mjk-unsplash.jpg', description: "Propel your aerospace endeavors to new heights with our advanced propellant tanks, engineered for optimal fuel storage while prioritizing sustainability. Achieve liftoff with confidence, knowing you're choosing an eco-friendly solution for space exploration."},
+      { name: 'Insulators', image: 'images/New Folder 2/aerospace/insulators.jpg', description: " Enhance your aerospace innovations with our high-performance insulators, offering exceptional thermal and electrical insulation for space missions while minimizing environmental impact. Reach for the stars while keeping our planet in mind."},
+      { name: 'Nozzles', image: 'images/New Folder 2/aerospace/meric-dagli-WWdCXWmDLQw-unsplash.jpg', description: "Ignite progress with our state-of-the-art aerospace nozzles, designed for efficient propulsion and reduced emissions, making space travel cleaner and more sustainable. Embark on interstellar journeys while contributing to a greener universe."},
+      { name: 'Structural Components', image: 'images/New Folder 2/aerospace/nasa-cIX5TlQ_FgM-unsplash.jpg', description: "Build the aerospace future sustainably using our eco-conscious structural components, combining strength and durability for spacecraft and aircraft while promoting environmentally friendly engineering. Shape the skies with a commitment to preserving the Earth's resources."},
+      { name: 'Vehicle Body Components', image: 'images/New Folder 2/Automotive/lenny-kuhne-jHZ70nRk7Ns-unsplash.jpg', description: "Drive innovation in the automobile industry with our cutting-edge vehicle body components, seamlessly blending aesthetics, functionality, and sustainability. Craft a greener future on the road without compromising on performance."},
+      { name: 'Insulators', image: 'images/New Folder 2/Automotive/insulators.jpg', description: "Navigate waters responsibly using our eco-friendly boat hulls and trims, designed for both high performance and environmental harmony. Seamlessly combine speed and sustainability on the open seas."},
+      { name: 'Frames & Handles', image: 'images/New Folder 2/Automotive/alessio-lin-2n1SciGY5dI-unsplash.jpg', description: "Redefine automotive structures with our eco-conscious frames and handles, delivering both strength and eco-friendliness in every drive. Grip the wheel of progress while reducing your ecological impact."},
+      { name: 'Equipment Panels', image: 'images/New Folder 2/Automotive/Equipment pannels.jpg', description: "Elevate your vehicles with our advanced equipment panels, merging innovative technology with sustainable materials. Control your ride with precision while contributing to a cleaner, greener planet."},
+      { name: 'Structural Components', image: 'images/New Folder 2/Automotive/VEHICLE BODY.jpg', description: " Build the future of mobility with our environmentally conscious structural components, forging the backbone of vehicles while prioritizing sustainability. Drive forward while treading lightly on the environment."}
+    ],
+    4: [
+      { name: 'Tea & Coffee Bags', image: 'images/New Folder 2/packaging/coffee bags.jpg', description: " Savor sustainability with our eco-friendly tea and coffee bags, providing a flavorful experience while minimizing environmental impact. Brew a cup of consciousness and contribute to a greener world." },
+      { name: 'Buckets', image: 'images/New Folder 2/packaging/buckets.jpg', description: "Contain your goods responsibly with our sturdy and environmentally conscious buckets, offering storage solutions that balance strength and sustainability. Store your essentials while supporting a cleaner future. " },
+      { name: 'Storage Containers', image: 'images/New Folder 2/packaging/storage containers.jpg', description: "Organize with a purpose using our eco-friendly storage containers, designed for convenience and environmental consciousness. Keep your belongings in order while embracing sustainable living." },
+      { name: 'Boxes & Jars', image: 'images/New Folder 2/packaging/spices-2271254_1920.jpg', description: " Package your products sustainably with our thoughtfully designed boxes and jars, merging aesthetics and eco-friendliness for a responsible presentation. Choose packaging that resonates with environmentally conscious consumers. " },
+      { name: 'Flip-Cap Lids', image: 'https://image.made-in-china.com/202f0j00iDPYwduGCrks/Non-Toxic-BPA-Free-Eco-Friendly-Tritan-Sports-Water-Bottle-Fast-Flow-Flip-Top-Leak-Proof-Lid-W-One-Click-Open.webp', description: "Seal the deal with our eco-conscious flip-cap lids, combining functionality with sustainability. Keep your products fresh while contributing to a planet that stays just as vibrant. " },
+      { name: 'Cups', image: 'images/New Folder 2/packaging/cups.jpg', description: " Sip responsibly with our eco-friendly cups, offering a convenient way to enjoy beverages while promoting a greener lifestyle. Hydrate yourself and the Earth simultaneously. " },
+      { name: 'Bottles', image: 'images/New Folder 2/packaging/bottels.jpg', description: "Store and transport with a conscience using our environmentally conscious bottles and canisters, striking the perfect balance between utility and sustainability. Package with purpose for a cleaner future." },
+      { name: 'Pouches', image: 'images/New Folder 2/packaging/pouches.jpg', description: "Package innovation and sustainability with our eco-friendly pouches, offering versatile solutions for various applications while minimizing environmental impact. Secure your contents while choosing a greener option. " },
+      { name: 'Plant Pots', image: 'images/New Folder 2/packaging/PLANT POTS.jpg', description: "Nurture growth with our eco-conscious plant pots, providing a responsible way to cultivate greenery while supporting a more sustainable ecosystem. Grow your garden while nurturing the Earth. " },
+      { name: 'Trays', image: 'images/New Folder 2/packaging/TRAYS.jpg', description:  "Serve up sustainability with our eco-friendly trays, designed for both convenience and environmental care. Present your offerings with a side of responsibility. " },
+      { name: 'Toys', image: 'images/New Folder 2/packaging/TOYS.jpg', description: " Play with purpose using our eco-conscious toys, crafted with sustainable materials to ensure fun for generations while respecting the planet. Foster imagination while fostering a greener world. " },
+      { name: 'Tree Protection', image: 'images/New Folder 2/packaging/TREE PROTECTION.jpg', description: "Safeguard nature's treasures with our environmentally conscious tree protection solutions, promoting the growth and longevity of trees while showing commitment to conservation."},
+      { name: 'Waste Bags', image: 'images/New Folder 2/packaging/WASTE BAGS.jpg', description: "Dispose of waste responsibly using our eco-friendly waste bags, providing a sustainable option for managing trash while reducing environmental harm. Choose a cleaner way to handle waste."}
+    ]
+  };
+
+  return productsByCategory[categoryId] || [];
+}
+
+</script>
+
+   </body>
+
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var anchor = document.getElementById('myAnchor');
+            var copyAlert = document.getElementById('copyAlert');
+
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                var href = anchor.getAttribute('href');
+
+                var textarea = document.createElement('textarea');
+                textarea.value = href;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+
+                copyAlert.style.display = 'block'; // Display the Bootstrap alert
+                setTimeout(function() {
+                    copyAlert.style.display = 'none'; // Hide the alert after a delay
+                }, 2000); // Hide after 2 seconds
+            });
+        });
+    </script>
+</html>
