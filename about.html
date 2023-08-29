@@ -27,10 +27,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"/>
       <style>
         .about-section {
             background-color: #f2f2f2;
@@ -96,6 +94,11 @@ width: 303px;
 .card:hover h3 {
     color: #ffffff;
 }
+.modal-content {
+  height: 550px;
+  width:550px;
+}
+
 .icons {
   width: 50%;
   min-width: 180px;
@@ -149,7 +152,7 @@ width: 303px;
                      
 					 
                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="products.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Target Sectors </a>
+                        <a class="nav-link dropdown-toggle" href="products.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products </a>
                         <ul class="dropdown-menu" >
                            <li><a href="electronic-products.html">Electronics</a> </li>
                            <li><a href="transportation-products.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Transportation</a>
@@ -208,18 +211,31 @@ width: 303px;
                            <h2>Our Company</h2>
 <!--                           <p>is fueled by a profound dedication to shaping a sustainable future for our planet. As trailblazers in the manufacturing sector, we specialize in the innovation of cutting-edge hybrid composite materials that redefine sustainability's boundaries. Our objective is to rise as a global leader, offering sustainable product services and advanced, lightweight, eco-friendly engineered materials across diverse domains.</p>-->
                             <p><strong>J.S.HyE-META</strong> has been meticulously crafted by a team of dynamic, unwavering and passionate individuals who are dedicated to improving the world for future generations. It is headquartered in the Netherlands with extensive R&D and a pilot plant in the Indian subcontinent. We, as a budding enterprise, are focused on engineering innovative plastic-free biodegradable hybrid composite materials that redefine the boundaries of sustainability and circular economy in a diverse value chain. Our introductory product is an innovative, plastic-free, 100% biodegradable, circularly sustainable NFRC material with wide functional applicability. It has diverse applications in the transportation, architecture, packaging, and electronics sectors, with a huge market share of around 900 billion euros.</p>
-                            <ul>
-                              <li>Our products are made of Hybrid composite materials which are sustainable & bio-degradable.</li>
-                              <li>Our eco-friendly products can be recycled with zero carbon emissions, converting into manure to improve the soil's quality & fertility.</li>
-                              <li>Our products are reusable, which eliminates plastic, to produce the same materials making it a CIRCULAR ECONOMY!</li>
-                              <ul>
+
                            </p>
                            <a href="#">Contact Us</a> 
                         </div>
                      </div>
+                     
                      <div class="col-lg-6">
-                         <div class="about-video-img" data-aos="fade-left"> <a href="https://www.youtube.com/watch?v=IA9O9YUbQew&t=10s" data-rel="prettyPhoto" title="Vimeo video"><i class="fas fa-play"></i></a> <img src="images/about.png" alt=""> </div>
+                        <div class="about-video-img" data-aos="fade-left">
+                           <img src="images/about.png" alt="About">
+                           <a href="https://www.youtube.com/watch?v=IA9O9YUbQew&t=10s" data-toggle="modal" data-target="#videoModal">
+                              <i class="fas fa-play"></i>
+                           </a>
+                        </div>
                      </div>
+
+               <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+               <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                     <div class="modal-body">
+                     <iframe src="https://www.youtube.com/embed/IA9O9YUbQew?autoplay=1&start=10" frameborder="0" height="500px" width="500px" allowfullscreen></iframe>
+                     </div>
+                  </div>
+               </div>
+               </div>
+
                   </div>
                </div>
             </div>
@@ -412,7 +428,7 @@ width: 303px;
                     <h2 style="font-size: xxx-large;" data-aos="fade-up" data-aos-anchor-placement="top-bottom">Visi<img class="O" src="images/ali-yalniz-world-is-spinning.gif">n</h2>
                 </div>
                 <p style="font-size: x-large;" data-aos="fade-up" data-aos-duration="1500">
-                    To establish ourselves as a worldwide all-encompassing solution provider, offering advanced, lightweight, eco-friendly engineered materials and sustainable product services tailored for a variety of domains.</p>
+                    To establish ourselves as a worldwide all-encompassing solution provider, offering advanced, innovative, plastic-free, advanced, lightweight re-engineered circularly sustainable materials and products services for multi-domain applications.</p>
                 <!-- <p data-aos="fade-up" data-aos-duration="3000"> -->
                     <!-- Phasellus scelerisque augue in sapien scelerisque feugiat. Integer dapibus congue ipsum vel -->
                     <!-- feugiat. Donec interdum felis vitae justo posuere, a eleifend justo posuere. Vestibulum vel sem -->
@@ -431,7 +447,7 @@ width: 303px;
                 <h2 style="font-size: xxx-large;" data-aos="fade-up">Missi<img class="O" src="images/ali-yalniz-world-is-spinning.gif">n</h2>
             </div>
             <p style="font-size: x-large;" data-aos="fade-right">
-                An innovative undertaking driven by a purpose to offer environmentally friendly solutions, promoting a sustainable and circular economy to safeguard Mother Earth and its habitat.
+                To deliver innovative materials that are entirely devoid of plastic, thereby championing the progress of a circular economy that places sustainability at the forefront, by bringing technologies to the world with partners to accelerate this transition leaving an impact.
             </p>
 
         </div>
